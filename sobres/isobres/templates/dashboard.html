@@ -1,0 +1,14 @@
+{% extends "root.html"%}
+{% block contenido %}
+
+<h1>Sobres de {{ username}}'s dashboard'</h1>
+{% if sobres %}
+<ul>{% for sobre in sobres %}
+<li>{{sobre.empresa.nom}} - {{sobre.concept}} -{{sobre.amount}}</li>
+{% endfor %}
+</ul>
+{% else %}
+<h2>No hay sobres</h2>
+{% endif %}
+
+{% endblock %}
